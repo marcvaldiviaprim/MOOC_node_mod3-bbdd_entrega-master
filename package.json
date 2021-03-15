@@ -1,6 +1,6 @@
 {
     "name": "MOOC_node_mod3-bbdd_entrega",
-    "author": "ging-moocs",
+    "author": "marc valdivia",
     "license": "GNU",
     "version": "0.0.0",
     "engines": {
@@ -28,4 +28,6 @@
         "type": "git",
         "url": "https://github.com/marcvaldiviaprim/MOOC_node_mod3-bbdd_entrega-master"
     }
+    
+    
 }
