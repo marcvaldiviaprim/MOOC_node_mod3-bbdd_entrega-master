@@ -25,12 +25,14 @@ rl.on('line', async (line) => {
     if      ('' ===cmd)   {}
     else if ('h' ===cmd)  { user.help(rl);}
 
+  
     else if (['lu', 'ul', 'u'].includes(cmd)) { await user.list(rl);}
     else if (['cu', 'uc'].includes(cmd))      { await user.create(rl);}
     else if (['ru', 'ur', 'r'].includes(cmd)) { await user.read(rl);}
     else if (['uu'].includes(cmd))            { await user.update(rl);}
     else if (['du', 'ud'].includes(cmd))      { await user.delete(rl);}
 
+    else if (['p'].includes(cmd)) { await quiz.play(rl);}
     else if (['lq', 'ql', 'q'].includes(cmd)) { await quiz.list(rl);}
     else if (['cq', 'qc'].includes(cmd))      { await quiz.create(rl);}
     else if (['tq', 'qt', 't'].includes(cmd)) { await quiz.test(rl);}
