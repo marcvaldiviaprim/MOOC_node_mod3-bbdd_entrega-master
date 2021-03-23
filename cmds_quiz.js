@@ -55,7 +55,7 @@ exports.test = async (rl) => {
     rl.log(`  The answer "${answered}" is wrong!`);
   }
 }
-
+// Play quiz
 exports.play = async (rl) => {
   let name = await rl.questionP("Enter user");
   let id = await rl.questionP("Enter quiz Id");
