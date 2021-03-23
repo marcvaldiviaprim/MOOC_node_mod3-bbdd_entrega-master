@@ -6,6 +6,8 @@ const sequelize = new Sequelize("sqlite:db.sqlite", options);
 
 class User extends Model {}
 class Quiz extends Model {}
+class scores extends Model{}
+
 
 User.init(
   { name: {
@@ -28,7 +30,15 @@ User.init(
   },
   { sequelize }
 );
+scores.init(
+{ wins: {
+  type:DataTypes.INTEGER,
+  allowNull:false
+}
 
+}
+
+)
 Quiz.init(
   { question: {
       type: DataTypes.STRING,

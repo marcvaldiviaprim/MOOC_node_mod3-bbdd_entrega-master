@@ -1,5 +1,5 @@
 
-const {User, Quiz} = require("./model.js").models;
+const {User, Quiz, scores} = require("./model.js").models;
 
 // Show all quizzes in DB including <id> and <author>
 exports.list = async (rl) =>  {
@@ -57,7 +57,7 @@ exports.test = async (rl) => {
 }
 
 exports.play = async (rl) => {
-  
+  let name = await rl.questionP("Enter user");
   let id = await rl.questionP("Enter quiz Id");
   let quiz = await Quiz.findByPk(Number(id));
   if (!quiz) throw new Error(`  Quiz '${id}' is not in DB`);
