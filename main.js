@@ -32,7 +32,7 @@ rl.on('line', async (line) => {
     else if (['uu'].includes(cmd))            { await user.update(rl);}
     else if (['du', 'ud'].includes(cmd))      { await user.delete(rl);}
 
-    else if (['p'].includes(cmd)) { await quiz.play(rl);}
+    else if (['p','play'].includes(cmd))      { await quiz.play(rl);}
     else if (['lq', 'ql', 'q'].includes(cmd)) { await quiz.list(rl);}
     else if (['cq', 'qc'].includes(cmd))      { await quiz.create(rl);}
     else if (['tq', 'qt', 't'].includes(cmd)) { await quiz.test(rl);}
@@ -43,7 +43,7 @@ rl.on('line', async (line) => {
     else if (['cf', 'fc'].includes(cmd))      { await favs.create(rl);}
     else if (['df', 'fd'].includes(cmd))      { await favs.delete(rl);}
 
-    else if ('e'===cmd)  { rl.log('Bye!'); process.exit(0);}
+    else if ('e','exit'===cmd)  { rl.log('Bye!'); process.exit(0);}
     else                 {  rl.log('UNSUPPORTED COMMAND!');
                             user.help(rl);
                          };
